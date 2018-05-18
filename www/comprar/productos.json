@@ -1,0 +1,43 @@
+
+{
+	"productos": [
+
+		{
+			"nombre": "iPhone 8",
+			"precio": 35000000,
+			"cantidad": 100,
+			"imagen": "iphone8.jpg"
+		},
+		{
+			"nombre": "Disco Duro Externo 2TB",
+			"precio": 300000,
+			"cantidad": 80,
+			"imagen": "disco_duro.jpg"
+		},
+		{
+			"nombre": "Chocorramo",
+			"precio": 1000,
+			"cantidad": 30,
+			"imagen": "chocorramo.jpg"
+		},
+		{
+			"nombre": "Camiseta Selección Colombia",
+			"precio": 250000,
+			"cantidad": 10,
+			"imagen": "camiseta.jpg"
+		},
+		{
+			"nombre": "Mackbook Pro Retina 13' ",
+			"precio": 9000000,
+			"cantidad": 5,
+			"imagen": "macbook.jpg"
+		},
+		{
+			"nombre": "Balón Mundial Rusia 2018",
+			"precio": 430000 ,
+			"cantidad": 2,
+			"imagen": "balon.jpg"
+		}
+	]
+}
+
