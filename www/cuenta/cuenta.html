@@ -1,0 +1,33 @@
+<ion-view view-title="Cuenta">
+  <ion-content>
+  	<ion-row class="myphoto">
+ 
+    <img src="img/descarga.png" width="300" class="title">
+
+</ion-row>
+    <form name="register" ng-if="!usuarioActual">
+		<div class="list">
+			<label class="item item-input">
+				<input type="email" placeholder="Email" ng-model="perfil.email">
+			</label>
+
+			<label class="item item-input">
+				<input type="password" placeholder="Contraseña" ng-model="perfil.password">
+			</label>
+		</div>
+	</form>
+
+	<ul class="list" ng-if="usuarioActual">
+		<li class="item item—input">{{usuarioActual.email}}</li> 
+		<li class="item item—input">{{usuarioActual.uid}}</li>
+	</ul>
+
+
+  </ion-content>
+
+  <ion-footer-bar align-title="left" class="">
+    <button class="button button-positive" ng-if="!usuarioActual" ng-click="iniciar_sesion()">Iniciar Sesión</button>
+    <button class="button button-positive" ng-if="!usuarioActual" ng-click="registrar()">Registrar</button>
+    <button class="button button-positive" ng-if="!usuarioActual" ng-click="cerrar_sesion()">Terminar</button>
+  </ion-footer-bar>
+  

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic'])
+angular.module('starter', ['ionic','firebase'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -73,6 +73,14 @@ angular.module('starter', ['ionic'])
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/comprar');
-
+ var config = {
+    apiKey: "AIzaSyALZ_LKutGPpx2hcN6tyJyUIRGOgdgNXlw",
+    authDomain: "smartmarket-1fae3.firebaseapp.com",
+    databaseURL: "https://smartmarket-1fae3.firebaseio.com",
+    projectId: "smartmarket-1fae3",
+    storageBucket: "smartmarket-1fae3.appspot.com",
+    messagingSenderId: "760500644176"
+  };
+  firebase.initializeApp(config);
 
 });
