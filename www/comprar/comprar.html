@@ -2,10 +2,10 @@
 <ion-view view-title="comprar">
   <ion-content>
    <div class="row" ng-repeat="rows in ctrl.productos">
-   		<div class="col" ng-repeat="p in rows">
-   			<img height="130px" ng-src="img/{{p.imagen}}" />
+   		<div class="col" ng-repeat="p in rows" ng-click="comprar(p)">
+   			<img height="130px" ng-src="{{p.imagen}}" />
    			<p><strong>{{p.nombre}}</strong></p>
-   			<p><strong>{{p.precio}}</strong></p>
+   			<p><strong>{{p.precio|currency}}</strong></p>
    			<p><strong></strong></p>
    		</div>
    	

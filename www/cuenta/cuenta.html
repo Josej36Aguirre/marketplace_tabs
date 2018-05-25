@@ -28,6 +28,6 @@
   <ion-footer-bar align-title="left" class="">
     <button class="button button-positive" ng-if="!usuarioActual" ng-click="iniciar_sesion()">Iniciar Sesión</button>
     <button class="button button-positive" ng-if="!usuarioActual" ng-click="registrar()">Registrar</button>
-    <button class="button button-positive" ng-if="!usuarioActual" ng-click="cerrar_sesion()">Terminar</button>
+    <button class="button button-positive" ng-if="usuarioActual" ng-click="cerrar_sesion()">Terminar</button>
   </ion-footer-bar>
   

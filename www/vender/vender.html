@@ -1,16 +1,43 @@
-<div>
-	<label class="item item-input item-floating-label">
-		<span class="input-label">Nombre</span>
-		<input type="text" placeholder="Ingrese su nombre" name="">
-	</label>
-	<label class="item item-input item-floating-label">
-		<span class="input-label">Edad</span>
-		<input type="text" placeholder="Ingrese su edad" name="">
-	</label>
-	<label class="item item-input item-floating-label">
-		<span class="input-label">Email</span>
-		<input type="text" placeholder="ingrese@suemail.com" name="">
-	</label>
-	<input type="submit" name="boton" value="Enviar">
+<ion-view view-title="vender">
+  <ion-content>
 
-</div>
+<div class="item item-divider"> Ingresar los campos del producto:</div>
+
+    <div class="list">
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Nombre Producto</span>
+            <input type="text" placeholder="Digite nombre producto" ng-model="producto.nombre">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Precio</span>
+            <input type="number" placeholder="Pesos Colombianos" ng-model="producto.precio">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Cantidad</span>
+            <input type="tel" placeholder=" > a 0"ng-model="producto.cantidad">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Link Imagen</span>
+            <input type="url" placeholder="Pegar Url"ng-model="producto.imagen">
+        </label>
+        <label class="item item-input item-stacked-label">
+            <span class="input-label">Observaciones</span>
+            <textarea placeholder="Comments"></textarea>
+        </label>
+<div class="item item-divider"> See also:</div>
+<!--
+          <ion-toggle  ng-model="settings.enableFriends">
+        Recibir Notificaciones al correo
+    </ion-toggle>
+    <div class="item item-divider"> Recibir Notificaciones Sobre:</div>
+    <ion-checkbox ng-model="categoria1">Apple</ion-checkbox>
+    <ion-checkbox ng-model="categoria2">Ropa</ion-checkbox>
+    <ion-checkbox ng-model="categoria3">Energéticos</ion-checkbox>
+-->
+    <div class="row text-center">
+        <div class="col"><button ng-click="vender()" class="button button-balanced">Guardar</button></div>
+    </div>
+
+    </div>
+  </ion-content>
+</ion-view>

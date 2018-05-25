@@ -27,18 +27,26 @@ angular.module('starter').controller('CuentaCtrl', function($scope, servicioCuen
 		$scope.usuarioActual = servicioCuenta.usuarioActual();
 		}, function(err) {
 			$ionicLoading.hide();
+			$ionicPopup.alert({
+			title: err.code,
+			template: err.message
+		});
 
 		});
 	};
 
-	$scope.terminbr_sesion = function() {
+	$scope.terminar_sesion = function() {
 
 		$ionicLoading.show();
-		servicioCuenta . terminar_sesion($scope.perfil).then(function () {
-		$ionicLoading.hide();
-		$scope.usuarioActual = null;
-		}, function(err) {
+		servicioCuenta.terminar_sesion($scope.perfil).then(function() {
 			$ionicLoading.hide();
+			$scope.usuarioActual = null;
+			}, function(err) {
+				$ionicLoading.hide();
+				$ionicPopup.alert({
+				title: err.code,
+				template: err.message
+			});
 		});
 	};
-});
+});	
